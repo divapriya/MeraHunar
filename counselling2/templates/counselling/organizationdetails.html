@@ -1,0 +1,9 @@
+{% block content %}
+    <div id="organization">
+    	{% for organization in organizations %}
+        <p><a href="/counselling/singleorganization/{{organization.pk}}">{{organization.name}}{{organization.location}}{{organization.email_id}}{{organization.year_establishment}}{{organization.fields}}{{organization.examples}}</a></p>
+       
+        {% endfor %}
+    </div>
+  
+{% endblock %}

@@ -1,0 +1,29 @@
+{% block content %}
+                <div class="title">{{organization.name }}</div>
+                <ul>
+                    <div class="time">{{ organization.details.location }}</div>
+                    <div class="body">{{ organization.details.year_establishment  }}</div>
+                </ul>
+
+
+<!-- Comments  -->
+{% if comments %}
+    <p>Comments:</p>
+
+{% for comment in comments %}
+    <div class="comment">
+        <div class="time">{{ comment.comment }} | {{ comment.by }}</div>
+    </div>
+{% endfor %}
+
+{% endif %}
+
+<div id="addc">Add a comment</div>
+<!-- Comment form  -->
+<form action="/counselling/add_comment/{{organization.pk}}" method="POST">{% csrf_token %}
+    <div id="cform">
+        <p>{{ form.comment|linebreaks }}</p>
+    </div>
+    <div id="submit"><input type="submit" value="Submit"></div>
+</form>
+{% endblock %}

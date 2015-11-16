@@ -1,0 +1,51 @@
+{% extends "baseApp/base.html" %}
+{% block title %}Register - Merahunar{% endblock title %}
+{% block content%}
+     <form action="" method="POST">
+     {% csrf_token %}
+     
+     <div class="register_div">
+     
+     <div class="form-group">
+                            <label class="sr-only" for="extra_curricullums">extra_curricullums</label>
+                            <input type="name" class="form-control" id="extra_curricullums" placeholder="extra_curricullums">
+                        </div>
+
+     <div class="form-group">
+                            <label class="sr-only" for="qualification">qualification</label>
+                            <input type="name" class="form-control" id="qualification" placeholder="qualification">
+                        </div>
+
+     <div class="form-group">
+                            <label class="sr-only" for="employment">employment</label>
+                            <input type="name" class="form-control" id="employment" placeholder="employment">
+                        </div>
+
+     <div class="form-group">
+                            <label class="sr-only" for="personalinterest">personalinterest</label>
+                            <input type="name" class="form-control" id="personalinterest" placeholder="personalinterest">
+                        </div>
+
+     <div class="form-group">
+                            <label class="sr-only" for="qualification_preference">qualification_preference</label>
+                            <input type="name" class="form-control" id="qualification_preference" placeholder="qualification_preference">
+                        </div>
+
+     <div class="form-group">
+                            <label class="sr-only" for="extra_curricullums_preference">extra_curricullums_preference</label>
+                            <input type="name" class="form-control" id="extra_curricullums_preference" placeholder="extra_curricullums_preference">
+                        </div>
+
+     <div class="form-group">
+                            <label class="sr-only" for="employment_preference">employment_preference</label>
+                            <input type="name" class="form-control" id="employment_preference" placeholder="employment_preference">
+                        </div>
+
+     <div class="form-group">
+                            <label class="sr-only" for="personalinterest_preference">personalinterest_preference</label>
+                            <input type="name" class="form-control" id="personalinterest_preference" placeholder="personalinterest_preference">
+                        </div>
+
+     <p><input type="Submit"></p>
+ </form>
+{% endblock %}

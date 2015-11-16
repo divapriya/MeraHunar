@@ -1,0 +1,29 @@
+{% block content %}
+                <div class="title">{{organization.name }}</div>
+                <ul>
+                    <div class="time">{{ organization.details.roles.freelancer.Exp }}</div>
+                    <div class="body">{{ organization.details.roles.freelancer.funcArea  }}</div>
+                </ul>
+
+
+<!-- Comments  -->
+{% if comments %}
+    <p>Comments:</p>
+
+{% for comment in comments %}
+    <div class="comment">
+        <div class="time">{{ comments.comment }} | {{ comments.by.firstName }}</div>
+    </div>
+{% endfor %}
+
+{% endif %}
+
+<div id="addc">Add a comment</div>
+<!-- Comment form  -->
+<form action="/counselling/add_comment/{{organization.pk}}" method="POST">{% csrf_token %}
+    <div id="cform">
+        <p></p>
+    </div>
+    <div id="submit"><input type="submit" value="Submit"></div>
+</form>
+{% endblock %}
